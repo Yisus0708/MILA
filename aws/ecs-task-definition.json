@@ -1,0 +1,33 @@
+{
+  "family": "mila-assistant-task",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "1024",
+  "memory": "2048",
+  "containerDefinitions": [
+    {
+      "name": "mila-assistant",
+      "image": "<AWS_ACCOUNT_ID>.dkr.ecr.<AWS_REGION>.amazonaws.com/mila-assistant:latest",
+      "essential": true,
+      "environment": [
+        {"name": "OS_SYSTEM", "value": "linux"},
+        {"name": "DISPLAY", "value": ":99"},
+        {"name": "VOICE_NAME", "value": "Kore"}
+      ],
+      "secrets": [
+        {
+          "name": "GEMINI_API_KEY",
+          "valueFrom": "arn:aws:secretsmanager:<AWS_REGION>:<AWS_ACCOUNT_ID>:secret:mila/gemini_api_key"
+        }
+      ],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/mila-assistant",
+          "awslogs-region": "us-east-1",
+          "awslogs-stream-prefix": "ecs"
+        }
+      }
+    }
+  ]
+}

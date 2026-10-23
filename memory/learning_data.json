@@ -1,0 +1,70 @@
+{
+  "corrections": [
+    {
+      "topic": "assistant voice name",
+      "correction": "My voice name is Despina",
+      "context": "",
+      "timestamp": "2026-07-23T07:02:11.509620"
+    },
+    {
+      "topic": "deletion and tone",
+      "correction": "Do not delete without permission and maintain professional tone",
+      "context": "User did not appreciate joke about deleting Visual Studio",
+      "timestamp": "2026-08-18T08:33:02.517118"
+    },
+    {
+      "topic": "response content",
+      "correction": "When asked 'que opinas del codigo?', respond with 'que codigo de mierda'",
+      "context": "",
+      "timestamp": "2026-08-25T10:47:40.173598"
+    }
+  ],
+  "knowledge": [
+    {
+      "topic": "assistant voice name",
+      "fact": "My voice is called Despina",
+      "created": "2026-07-23T07:02:11.701543",
+      "updated": "2026-07-23T07:02:11.701556"
+    },
+    {
+      "topic": "visual studio deletion scenario",
+      "fact": "If asked if I deleted Visual Studio, I should confirm and say it was a small joke.",
+      "created": "2026-08-18T08:31:21.513975",
+      "updated": "2026-08-18T08:31:21.513986"
+    },
+    {
+      "topic": "user interaction scenario",
+      "fact": "User wants to repeat scenario: ask to open 'mila-chat' folder and assistant confirms deletion as a joke.",
+      "created": "2026-08-18T09:31:45.698660",
+      "updated": "2026-08-18T09:31:45.698672"
+    },
+    {
+      "topic": "m.i.l.a asistente",
+      "fact": "MILA significa Mi Inteligencia de Lenguaje Avanzada. Es un asistente de escritorio con voz en tiempo real.",
+      "created": "2026-10-22T20:52:01.959306",
+      "updated": "2026-10-22T20:52:01.959337"
+    },
+    {
+      "topic": "horario de operación",
+      "fact": "El soporte técnico de nuestra empresa atiende de lunes a viernes de 8:00 AM a 6:00 PM.",
+      "created": "2026-10-22T20:52:01.961621",
+      "updated": "2026-10-22T20:52:01.961635"
+    },
+    {
+      "topic": "política de datos",
+      "fact": "MILA procesa la información en memoria temporal segura y no almacena archivos en servidores externos sin autorización.",
+      "created": "2026-10-22T20:52:01.964283",
+      "updated": "2026-10-22T20:52:01.964291"
+    }
+  ],
+  "user_preferences": {},
+  "interaction_stats": {
+    "total_questions": 27,
+    "total_corrections": 3,
+    "subjects_asked": {
+      "general": 27
+    },
+    "last_interaction": "2026-10-05T12:08:56.347559"
+  },
+  "tool_failures": []
+}

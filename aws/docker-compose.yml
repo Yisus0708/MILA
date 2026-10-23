@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  mila-app:
+    build:
+      context: ..
+      dockerfile: aws/Dockerfile
+    container_name: mila-assistant
+    restart: unless-stopped
+    env_file:
+      - ../.env
+    environment:
+      - OS_SYSTEM=linux
+      - DISPLAY=:99
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - VOICE_NAME=${VOICE_NAME:-Kore}
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID:-}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY:-}
+      - AWS_DEFAULT_REGION=${AWS_DEFAULT_REGION:-us-east-1}
+      - AWS_S3_BUCKET_NAME=${AWS_S3_BUCKET_NAME:-}
+    volumes:
+      # Persistencia de memoria y base de conocimiento entre reinicios del contenedor
+      - ../memory:/app/memory
+      - ../config:/app/config
+      - ../training:/app/training
+    devices:
+      # Acceso a audio host si está disponible en la máquina Linux/EC2
+      - /dev/snd:/dev/snd
+    network_mode: host

@@ -1,0 +1,56 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environment & Secret files
+.env
+.env.local
+.env.*.local
+config/api_keys.json
+
+# Operating System Files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+*.swp
+*.swo
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Logs and databases
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Scratch & Temporary Testing Directories
+scratch/
+test_*.pdf
+test_*.py
+test_tune*.py
+
+# Runtime Cache & Local User Data (keeps template clean)
+memory/session_recap.json
+memory/conversation_history.json
+
+# IDE & Editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build / Distribution
+build/
+dist/
+*.egg-info/
+.eggs/
